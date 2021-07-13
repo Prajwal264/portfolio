@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import * as styles from '../styles/pages/experience.module.scss';
+import * as styles from '../styles/components/experience.module.scss';
 
 function Experience() {
   return (
@@ -15,7 +15,7 @@ function Experience() {
         </div>
         <div className={styles.companyBodyWrapper}>
           <p>
-            This company has brought the best out of me, When I joined here I knew next to nothing my colleagues and this company as whole has shaped me.
+            This company has brought the best out of me, When I joined here I knew next to nothing. My colleagues and this company as whole has shaped me.
             I've worked on many projects for shaw till now. I might not be able to list all of them here. But here are a few that I'd like to mention.
           </p>
           <h5>Contributions</h5>
