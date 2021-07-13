@@ -1,0 +1,79 @@
+@import '../_utils/variables';
+@import '../_utils/mixins';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 48px;
+  position: relative;
+  width: 100%;
+  .heading {
+    font-size: 50px;
+    color: #636061;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  .tabContainer {
+    margin-top: 24px;
+    .navSwitcher {
+      display: flex;
+      align-items: center;
+      @include respond(tablet) {
+        flex-direction: column;
+        align-items: start;
+      }
+      @include respond(mobile) {
+        flex-wrap: wrap;
+      }
+      :global(.nav) {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        border-bottom: 1px solid #F0F2F5;
+        :global(.nav-item) {
+          display: flex;
+          align-items: center;
+          :global(.nav-link) {
+            padding: 16px 0;
+            margin: 0 24px;
+            color: #C8D1DC;
+            font-size: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            &:global(.active) {
+              color: #636061;
+              border-bottom: 1px solid #636061;
+              font-weight: 600;
+            }
+          }
+          :global(.nav-link:first-of-type) {
+            @include respond(tablet) {
+              margin-left: unset;
+            }
+            @include respond(mobile) {
+              margin-left: unset;
+            }
+          }
+        }
+      }
+    }
+    :global(.tab-content) {
+      margin-top: 24px;
+      :global(.tab-pane){
+        display: none;
+        &:global(.active) {
+          display: block;
+        }
+        &:global(.fade) {
+          transition: opacity .15s linear;
+        }
+      }
+    }
+  }
+  .image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
