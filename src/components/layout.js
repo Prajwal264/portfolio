@@ -7,10 +7,10 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import GbiBridged from './backgroud-image'
-import '../styles/_utils/_global.scss';
-import SideBar from './SideBar';
-import * as styles from '../styles/components/layout.module.scss';
+import GbiBridged from "./backgroud-image"
+import "../styles/_utils/_global.scss"
+import SideBar from "./sidebar"
+import * as styles from "../styles/components/layout.module.scss"
 
 const Layout = ({ children }) => {
   return (
