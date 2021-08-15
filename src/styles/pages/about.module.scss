@@ -7,14 +7,32 @@
   padding: 64px 48px;
   position: relative;
   width: 100%;
+  @include respond(tablet) {
+    padding: 16px;
+  }
+  @include respond(mobile) {
+    padding: 16px;
+  }
   .heading {
     font-size: 50px;
     color: #636061;
     margin-bottom: 16px;
     font-weight: bold;
+    @include respond(tablet) {
+      font-size: 24px;
+    }
+    @include respond(mobile) {
+      font-size: 24px;
+    }
   }
   .tabContainer {
     margin-top: 24px;
+    @include respond(tablet) {
+      margin-top: unset;
+    }
+    @include respond(mobile) {
+      margin-top: unset;
+    }
     .navSwitcher {
       display: flex;
       align-items: center;

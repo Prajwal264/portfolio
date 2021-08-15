@@ -1,18 +1,54 @@
+
+@import '../_utils/variables';
+@import '../_utils/mixins';
+
 .sideBar {
   background: #FFF5F5;
   max-width: 300px;
   width: 100%;
   border-radius: 16px 0 0 16px;
   padding: 48px 36px;
+  @include respond(tablet) {
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: unset;
+  }
+  @include respond(mobile) {
+    bottom: 0;
+    position: fixed;    
+    z-index: 1;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: unset;
+  }
   .projectNameWrapper {
     .projectName {
       font-weight: bold;
       font-size: 30px;
       color: #636061;
+      @include respond(tablet) {
+        display: none;
+      }
+      @include respond(mobile) {
+        display: none;
+      }
     }
   }
   .profilePicWrapper {
     margin: 36px 0;
+    @include respond(tablet) {
+      display: none;
+    }
+    @include respond(mobile) {
+      display: none;
+    }
     img {
       width: 60px;
       height: 60px;
@@ -23,6 +59,21 @@
     margin-top: 36px;
     display: flex;
     flex-direction: column;
+    @include respond(tablet) {
+      margin-top: unset;
+      flex-direction: row;
+      margin-top: unset;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include respond(mobile) {
+      flex-direction: row;
+      margin-top: unset;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
     a {
       margin: 16px 0;
       font-size: 14px;
@@ -40,6 +91,20 @@
           height: 100%;
           border-radius: 1px;
           border-left: 3px solid #636061;
+          @include respond(tablet) {
+            border-left: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -16px;
+            border-bottom: 3px solid #636061;
+          }
+          @include respond(mobile) {
+            border-left: unset;
+            border-bottom: 3px solid #636061;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -16px;
+          }
         }
       }
     }

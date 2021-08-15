@@ -1,0 +1,69 @@
+@import '../_utils/variables';
+@import '../_utils/mixins';
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 48px;
+  position: relative;
+  width: 100%;
+  @include respond(tablet) {
+    padding: 16px;
+  }
+  @include respond(mobile) {
+    padding: 16px;
+  }
+  .heading {
+    font-size: 50px;
+    color: #636061;
+    margin-bottom: 16px;
+    font-weight: bold;
+    @include respond(tablet) {
+      font-size: 24px;
+    }
+    @include respond(mobile) {
+      font-size: 24px;
+    }
+  }
+  .info {
+    color: #C8D1DC;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    .inputGroup {
+      margin-bottom: 24px;
+      label {
+        color: #C8D1DC;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      input, textarea {
+        border: none;
+        border-bottom: 1px solid #C8D1DC;
+        width: 100%;
+        background-color:transparent;
+        padding: 8px;
+        max-width: 100%;
+      }
+    }
+    button {
+      font-size: 24px;
+      color: #636061;
+      margin-bottom: 16px;
+      font-weight: bold;
+      border:none;
+      background-color: transparent;
+      padding: 8px;
+      margin-left: auto;
+      transition: all 0.4s ease;
+      border-radius: 8px;
+      &:hover {
+        background-color: #636061;
+        color: #fff;
+      }
+    }
+  }
+}

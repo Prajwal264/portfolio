@@ -1,3 +1,5 @@
+@import '../_utils/variables';
+@import '../_utils/mixins';
 .skillsWrapper {
   display: flex;
   flex-direction: column;
@@ -24,6 +26,9 @@
         transition: all 0.4s ease;
         display: flex;
         align-items: center;
+        @include respond(mobile) {
+          width: 100%;
+        }
         &:hover {
           transform: translateY(-4px);
         }

@@ -1,3 +1,6 @@
+
+@import '../_utils/variables';
+@import '../_utils/mixins';
 .education {
   display: flex;
   flex-direction: column;
@@ -20,6 +23,18 @@
       align-items: center;
       cursor: pointer;
       transition: all 0.4s ease;
+      @include respond(laptop) {
+        flex: 0 50%;   
+        max-width: unset;
+      }
+      @include respond(tablet) {
+        flex: 0 50%;   
+        max-width: unset;
+      }
+      @include respond(mobile) {
+        flex: 0 100%;
+        max-width: none;
+      } 
       &:hover {
         transform: translateY(-4px);
       }

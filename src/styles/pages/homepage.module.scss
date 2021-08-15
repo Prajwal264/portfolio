@@ -1,6 +1,14 @@
+@import '../_utils/variables';
+@import '../_utils/mixins';
 .homepage {
   padding: 64px 48px;
   position: relative;
+  @include respond(tablet) {
+    padding: 16px;
+  }
+  @include respond(mobile) {
+    padding: 16px;
+  }
   .bio {
     display: flex;
     align-items: center;
@@ -16,6 +24,12 @@
         color: #636061;
         margin-bottom: 16px;
         font-weight: bold;
+        @include respond(tablet) {
+          font-size: 24px;
+        }
+        @include respond(mobile) {
+          font-size: 24px;
+        } 
       }
       p {
         color: #8b8b8b;
