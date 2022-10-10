@@ -1,5 +1,5 @@
-@import '../_utils/variables';
-@import '../_utils/mixins';
+@import "../_utils/variables";
+@import "../_utils/mixins";
 .homepage {
   padding: 64px 48px;
   position: relative;
@@ -29,7 +29,7 @@
         }
         @include respond(mobile) {
           font-size: 24px;
-        } 
+        }
       }
       p {
         color: #8b8b8b;
@@ -38,7 +38,7 @@
     }
   }
   .image {
-    position: absolute;
+    position: absolute !important;
     right: 0;
     bottom: 0;
   }
