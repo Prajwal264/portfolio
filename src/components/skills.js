@@ -22,6 +22,16 @@ function Skills() {
               className={styles.image}
               placeholder="blurred"
               width={50}
+              src={`../images/typescript.png`}
+            />
+            <h5>Typescript</h5>
+          </div>
+
+          <div className={styles.card}>
+            <StaticImage
+              className={styles.image}
+              placeholder="blurred"
+              width={50}
               src={`../images/python.png`}
             />
             <h5>Python</h5>
